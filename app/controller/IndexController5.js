@@ -1,15 +1,22 @@
-angular.module('rw').controller('IndexController5', IndexController4);
+angular.module('rw').controller('IndexController5', IndexController5);
 
-IndexController4.$inject = ['$scope', '$timeout', 'AlertService'];
+IndexController5.$inject = ['$scope', '$timeout', 'AlertService'];
 
-function IndexController4($scope, $timeout, AlertService) {
+function IndexController5($scope, $timeout, AlertService) {
 
     $scope.listaDePessoas = [];
     $scope.entidade = {};
+    $scope.gridOptions = {};
     $scope.salvar = salvar;
     $scope.limpar = limpar;
     $scope.editar = editar;
     $scope.excluir = excluir;
+
+    iniciar();
+
+    function iniciar(){
+        $scope.gridOptions.data = 'listaDePessoas';
+    }
 
     function salvar() {
         if ($scope.myForm.$invalid) {

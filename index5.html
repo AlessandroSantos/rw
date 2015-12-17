@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+        <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css"/>
+        <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css"/>
+        <title></title>
+    </head>
+    <body ng-app="rw" class="container" ng-controller="IndexController5">
+        <form   novalidate name="myForm">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Cadastro de usuário
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="form-group" ng-class="{'has-error' : myForm.inpNome.$invalid && myForm.inpNome.$touched}">
+                                <label class="control-label">Nome</label>
+                                <input type="text" ng-model="entidade.nome" class="form-control" name="inpNome" required
+                                        ng-maxlength="50" ng-minlength="5">
+                                <div ng-messages="myForm.inpNome.$error" ng-if="myForm.inpNome.$invalid && myForm.inpNome.$touched" class="help-block">
+                                    <div ng-messages-include="messages.html"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group" ng-class="{'has-error' : myForm.inpEmail.$invalid && myForm.inpEmail.$touched}">
+                                <label class="control-label">email</label>
+                                <input type="email" ng-model="entidade.email" class="form-control" required name="inpEmail">
+                                <div ng-messages="myForm.inpEmail.$error" ng-if="myForm.inpEmail.$invalid && myForm.inpEmail.$touched" class="help-block">
+                                    <div ng-messages-include="messages.html"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group" ng-class="{'has-error' : myForm.inpSexo.$invalid && myForm.inpSexo.$touched}">
+                                <label class="control-label">Sexo</label>
+                                <select ng-model="entidade.sexo" class="form-control" name="inpSexo" required
+                                        ng-class="{'has-error' : myForm.inpSexo.$invalid && myForm.inpSexo.$touched}">
+                                    <option value="">Selecione</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Feminino</option>
+                                </select>
+                                <div ng-messages="myForm.inpSexo.$error" ng-if="myForm.inpSexo.$invalid && myForm.inpSexo.$touched" class="help-block">
+                                    <div ng-messages-include="messages.html"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group" ng-class="{'has-error' : myForm.inDate.$invalid && myForm.inDate.$touched}">
+                                <label class="control-label">Nascimento</label>
+                                <input type="date" ng-model="entidade.data" class="form-control" name="inDate" required>
+                                <div ng-messages="myForm.inDate.$error" ng-if="myForm.inDate.$invalid && myForm.inDate.$touched" class="help-block">
+                                    <div ng-messages-include="messages.html"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div ui-grid="gridOptions"></div>
+
+                </div>
+                <div class="panel-footer">
+                    <div class="btn-group-lg">
+                        <button class="btn btn-primary" ng-click="salvar()" ng-disabled="form.$invalid"><i class="fa fa-save"></i> Salvar</button>
+                        <button class="btn btn-warning" ng-click="limpar()"><i class="fa fa-eraser"></i> Limpar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="app/app-conf.js"></script>
+
+    <!-- controller -->
+    <script src="app/controller/IndexController5.js"></script>
+    <!-- service -->
+    <script src="app/service/alert-service.js"></script>
+</html>

@@ -13,6 +13,7 @@
     "bootstrap": "3.3.6",
     "font-awesome": "4.5.0",
     "angular-messages": "1.4.8",
-    "angular-toastr": "1.6.0"
+    "angular-toastr": "1.6.0",
+    "angular-ui-grid": "~3.0.7"
   }
 }
