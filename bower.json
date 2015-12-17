@@ -1,0 +1,18 @@
+{
+  "name": "cursoangular",
+  "description": "Curso de angularjs R&W",
+  "main": "index.js",
+  "authors": [
+    "Alessandro Santos"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "dependencies": {
+    "angular": "1.4.8",
+    "bootstrap": "3.3.6",
+    "font-awesome": "4.5.0",
+    "angular-messages": "1.4.8",
+    "angular-toastr": "1.6.0"
+  }
+}
