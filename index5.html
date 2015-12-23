@@ -28,10 +28,10 @@
                             </div>
                         </div>
                         <div class="col-sm-3">
-                            <div class="form-group" ng-class="{'has-error' : myForm.inpEmail.$invalid && myForm.inpEmail.$touched}">
-                                <label class="control-label">email</label>
-                                <input type="email" ng-model="entidade.email" class="form-control" required name="inpEmail">
-                                <div ng-messages="myForm.inpEmail.$error" ng-if="myForm.inpEmail.$invalid && myForm.inpEmail.$touched" class="help-block">
+                            <div class="form-group" ng-class="{'has-error' : myForm.inpCor.$invalid && myForm.inpCor.$touched}">
+                                <label class="control-label">Cor</label>
+                                <input type="text" ng-model="entidade.cor" class="form-control" required name="inpCor">
+                                <div ng-messages="myForm.inpCor.$error" ng-if="myForm.inpCor.$invalid && myForm.inpCor.$touched" class="help-block">
                                     <div ng-messages-include="messages.html"></div>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
     <script src="app/app-conf.js"></script>
 
     <!-- controller -->
-    <script src="app/controller/IndexController5.js"></script>
+    <script src="app/controller/index-controller5.js"></script>
     <!-- service -->
     <script src="app/service/alert-service.js"></script>
 </html>

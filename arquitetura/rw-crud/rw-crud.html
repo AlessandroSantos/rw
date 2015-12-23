@@ -1,0 +1,24 @@
+<form name="form">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <span ng-bind="::titulo"></span>
+        </div>
+        <div class="panel-body">
+            <ng-transclude></ng-transclude>
+        </div>
+        <div class="panel-footer">
+            <button class="btn btn-primary" ng-click="onSalvar()" ng-disabled="form.$invalid">
+                <i class="fa fa-save"></i>
+                Salvar
+            </button>
+            <button class="btn btn-warning" ng-click="onLimpar()">
+                <i class="fa fa-eraser"></i>
+                Limpar
+            </button>
+            <button class="btn btn-danger" ng-click="onExcluir()">
+                <i class="fa fa-trash"></i>
+                Excluir
+            </button>
+        </div>
+    </div>
+</form>

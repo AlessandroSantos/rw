@@ -4,8 +4,7 @@
 
 angular.module('rw').service('AlertService', AlertService);
 
-AlertService.$inject = ['toastr'];
-
+/* @ngInject */
 function AlertService(toastr) {
 
     this.showSuccess = showSuccess;

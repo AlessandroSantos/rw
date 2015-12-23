@@ -1,0 +1,10 @@
+<div class="form-group" ng-class="{'has-error' : form[inputName].$invalid && (form[inputName].$touched || form[inputName].$dirty)}">
+    <label class="control-label" ng-bind="label" for="{{::inputName}}"></label>
+    <input type="text" class="form-control" required name="{{::inputName}}"
+           placeholder="{{::placeholder}}" id="{{::inputName}}" ng-model="ngModel" ng-required="ngRequired"
+            ng-maxlength="ngMaxlength" ng-minlength="ngMinlength" key-event>
+
+    <div ng-messages="form[inputName].$error" ng-if="form[inputName].$invalid && (form[inputName].$touched || form[inputName].$dirty)" class="help-block">
+        <div ng-messages-include="messages.html"></div>
+    </div>
+</div>

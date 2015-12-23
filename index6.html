@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
+        <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.min.css"/>
+        <link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css"/>
+        <title></title>
+    </head>
+    <body ng-app="rw" class="container" ng-controller="IndexController6">
+        <button class="btn btn-default" ui-sref="home"><i class="fa fa-home"></i> </button>
+        <button class="btn btn-default" ui-sref="pessoa.pesquisa"><i class="fa fa-users" ></i> </button>
+        <button class="btn btn-default" ui-sref="pessoa.cadastro"><i class="fa fa-user-plus"></i> </button>
+        <div ui-view>
+
+        </div>
+    </body>
+
+    <!-- components -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.min.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+    <script src="app/app-conf.js"></script>
+
+    <!-- controller -->
+    <script src="app/controller/index-controller6.js"></script>
+    <!-- service -->
+    <script src="app/service/alert-service.js"></script>
+</html>

@@ -1,0 +1,16 @@
+/*
+    Teste de minificação do CSS
+*/
+
+.amarero{
+    background-color: #faff1f;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+    font-weight: bolder;
+}
+
+.verde{
+    background-color: #3e801b;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 100%;
+    min-height: 240px;
+}
